@@ -268,7 +268,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         </li>
        
 	</ul>
- After all previously performed actions, check API is working or not using POSTMAN app for API checking. All API URLs:
+ <h1>After all previously performed actions, check API is working or not using POSTMAN app for API checking. All API URLs:</h1>
            <h2>Product API</h2>
     <ol>
         <li>http://127.0.0.1:8000/api/products (GET)</li>
