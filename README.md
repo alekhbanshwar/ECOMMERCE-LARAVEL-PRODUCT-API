@@ -106,7 +106,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 }</li>
             </ul>
         </li>
-        <li>Product migration file (2024_07_08_091615_create_products_table.php):
+        <li><b>Product migration file (2024_07_08_091615_create_products_table.php):</b>
             <ul>
                 <li>$table->id();</li>
                 <li>$table->string('category');</li>
@@ -130,12 +130,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 <li>$table->timestamps();</li>
             </ul>
         </li>
-        <li>Create controller ProductController:
+        <li> <b>Create controller ProductController:</b>
             <ul>
                 <li>php artisan make:controller API/ProductController</li>
             </ul>
         </li>
-        <li>Create API in route(API.php) for product:
+        <li><b>Create API in route(API.php) for product:</b>
             <ul>
                 <li>Route::APIResource('products', ProductController::class);</li>
                 <li>Or</li>
@@ -146,22 +146,22 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 <li>Route::delete('products/{product}', [ProductController::class, 'destroy']);</li>
             </ul>
         </li>
-        <li>Check all the API list for this product:
+        <li><b>Check all the API list for this product:</b>
             <ul>
                 <li>php artisan route:list</li>
             </ul>
         </li>
-        <li>Create the resource for product:
+        <li><b>Create the resource for product:</b>
             <ul>
                 <li>php artisan make:resource ProductResource</li>
             </ul>
         </li>
-        <li>Create ProductAttr model:
+        <li><b>Create ProductAttr model:</b>
             <ul>
                 <li>php artisan make:model ProductAttr -m</li>
             </ul>
         </li>
-        <li>Some changes in ProductAttr.php file in model:
+        <li><b>Some changes in ProductAttr.php file in model:</b>
             <ul>
                 <li>protected $table = 'product_attrs';</li>
                 <li>protected $fillable = [
@@ -172,7 +172,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 }</li>
             </ul>
         </li>
-        <li>ProductAttr migration file (2024_07_08_091624_create_product_attrs_table.php):
+        <li<b>ProductAttr migration file (2024_07_08_091624_create_product_attrs_table.php):</b>
             <ul>
                 <li>$table->id();</li>
                 <li>$table->foreignId("products_id")->references('id')->on('products');</li>
@@ -186,12 +186,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 <li>$table->timestamps();</li>
             </ul>
         </li>
-        <li>Create controller ProductAttrController:
+        <li><b>Create controller ProductAttrController:</b>
             <ul>
                 <li>php artisan make:controller API/ProductAttrController</li>
             </ul>
         </li>
-        <li>Create API in route(API.php) for productAttr:
+        <li><b>Create API in route(API.php) for productAttr:</b>
             <ul>
                 <li>Route::get('productAttr/{pro_id}', [ProductAttrController::class, 'productAttrIndex']);</li>
                 <li>Route::post('productAttr/{pro_id}', [ProductAttrController::class, 'productAttrStore'])->name('productAttrStore');</li>
@@ -200,12 +200,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 <li>Route::delete('productAttr/{id}', [ProductAttrController::class, 'productAttrDestroy']);</li>
             </ul>
         </li>
-        <li>Create ProductImages model:
+        <li><b>Create ProductImages model:</b>
             <ul>
                 <li>php artisan make:model ProductImages -m</li>
             </ul>
         </li>
-        <li>Some changes in ProductImages.php file in model:
+        <li><b>Some changes in ProductImages.php file in model:</b>
             <ul>
                 <li>protected $table = 'product_images';</li>
                 <li>protected $fillable = ['products_id', 'images'];</li>
@@ -214,7 +214,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 }</li>
             </ul>
         </li>
-        <li>ProductImages migration file (2024_07_08_091631_create_product_images_table.php):
+        <li><b>ProductImages migration file (2024_07_08_091631_create_product_images_table.php):</b>
             <ul>
                 <li>$table->id();</li>
                 <li>$table->foreignId("products_id")->references('id')->on('products');</li>
@@ -222,12 +222,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 <li>$table->timestamps();</li>
             </ul>
         </li>
-        <li>Create controller ProductImagesController:
+        <li><b>Create controller ProductImagesController:</b>
             <ul>
                 <li>php artisan make:controller API/ProductImagesController</li>
             </ul>
         </li>
-        <li>Create API in route(API.php) for productImages:
+        <li><b>Create API in route(API.php) for productImages:</b>
             <ul>
                 <li>Route::get('productImages/{pro_id}', [ProductImagesController::class, 'ProductImages']);</li>
                 <li>Route::post('productImages/{pro_id}', [ProductImagesController::class, 'productImagesStore'])->name('productImagesStore');</li>
@@ -236,7 +236,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
             </ul>
         </li>
         <li>Go to controller then perform work</li>
-        <li>All API error handling, then go to bootstrap->app.php and some changes:
+        <li><b>All API error handling, then go to bootstrap->app.php and some changes:</b>
             <ul>
                 <li>use Illuminate\Http\Request;</li>
                 <li>use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;</li>
