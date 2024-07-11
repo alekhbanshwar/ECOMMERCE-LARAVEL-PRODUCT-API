@@ -85,17 +85,17 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
             </li>
         </ul>
   </li>
-        <li style="font-weight:15px;">Some changes on user.php model:
+  <li style="font-weight:15px;">Some changes on user.php model:
             <ul>
                 <li>use Laravel\Sanctum\HasAPITokens;</li>
                 <li>use HasFactory, Notifiable, HasAPITokens;</li>
             </ul>
   </li >
-        <li style="font-weight:15px;">Create product model:
+  <li style="font-weight:15px;">Create product model:
             <ul>
                 <li>php artisan make:model Product -m</li>
             </ul>
-        </li>
+ </li>
         <li style="font-weight:15px; ">Some changes in product.php file in model:
             <ul>
                 <li>protected $table = 'products';</li>
@@ -268,7 +268,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         </li>
        
 	</ul>
- <li style="font-weight:15px;">After all previously performed actions, check API is working or not using POSTMAN app for API checking. All API URLs:
+ After all previously performed actions, check API is working or not using POSTMAN app for API checking. All API URLs:
            <h2>Product API</h2>
     <ol>
         <li>http://127.0.0.1:8000/api/products (GET)</li>
@@ -294,4 +294,3 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         <li>http://127.0.0.1:8000/api/productImages/{pro_id}/{id} (GET)</li>
         <li>http://127.0.0.1:8000/api/productImages/{id} (DELETE)</li>
     </ol>
-        </li> 
