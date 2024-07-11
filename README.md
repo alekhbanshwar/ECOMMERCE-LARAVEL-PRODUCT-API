@@ -278,19 +278,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         <li>http://127.0.0.1:8000/api/products/{product} (DELETE)</li>
     </ol>
 
-    <h2>ProductAttr API</h2>
-    <ol>
-        <li>http://127.0.0.1:8000/api/productAttr/{pro_id} (GET)</li>
-        <li>http://127.0.0.1:8000/api/productAttr/{pro_id} (POST)</li>
-        <li>http://127.0.0.1:8000/api/productAttr/{pro_id}/{id} (GET)</li>
-        <li>http://127.0.0.1:8000/api/productAttr/{pro_id}/{id}?_method=PUT (POST)</li>
-        <li>http://127.0.0.1:8000/api/productAttr/{id} (DELETE)</li>
-    </ol>
-
-    <h2>ProductImages API</h2>
-    <ol>
-        <li>http://127.0.0.1:8000/api/productImages/{pro_id} (GET)</li>
-        <li>http://127.0.0.1:8000/api/productImages/{pro_id} (POST)</li>
-        <li>http://127.0.0.1:8000/api/productImages/{pro_id}/{id} (GET)</li>
-        <li>http://127.0.0.1:8000/api/productImages/{id} (DELETE)</li>
-    </ol>
+   
