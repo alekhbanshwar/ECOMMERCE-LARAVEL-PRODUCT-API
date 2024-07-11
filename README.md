@@ -74,23 +74,23 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 <li>composer create-project laravel/laravel ECOMMER-LARAVEL-API</li>
             </ul>
         </li>
-        <li>Install API for the projects
+        <li><b>Install API for the projects:</b>
             <ul>
                 <li>php artisan install:API</li>
             </ul>
         </li>
-        <li>Some changes on user.php model:
+        <li><b>Some changes on user.php model:</b>
             <ul>
                 <li>use Laravel\Sanctum\HasAPITokens;</li>
                 <li>use HasFactory, Notifiable, HasAPITokens;</li>
             </ul>
         </li>
-        <li>Create product model:
+        <li><b>Create product model:</b>
             <ul>
                 <li>php artisan make:model Product -m</li>
             </ul>
         </li>
-        <li>Some changes in product.php file in model:
+        <li> <b>Some changes in product.php file in model:</b>
             <ul>
                 <li>protected $table = 'products';</li>
                 <li>protected $fillable = [
