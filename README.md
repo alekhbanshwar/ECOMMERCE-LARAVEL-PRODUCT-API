@@ -69,7 +69,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 <h2>ECOMMER-LARAVEL-API PROJECT DOCUMENTATION</h2>
     <ul>
         <li>Install composer</li>
-        <li>Create Project:
+        <li><b> Create Project:</b>
             <ul>
                 <li>composer create-project laravel/laravel ECOMMER-LARAVEL-API</li>
             </ul>
