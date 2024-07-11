@@ -68,8 +68,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## Some project information
 <h2>ECOMMER-LARAVEL-API PROJECT DOCUMENTATION</h2>
 <ul>
-    <li style="font-weight:bold;">install composer</li>
-    <li style="font-weight:bold;">Create Project: 
+    <li style="font-weight:15px;">install composer</li>
+    <li style="font-weight:15px;">Create Project: 
         <ul>
             <li>
                 composer create-project laravel/laravel ECOMMER-LARAVEL-API 
@@ -77,19 +77,19 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         </ul>
     </li>
 
-  <li style="font-weight:bold;>php artisan install:API</li>
-        <li style="font-weight:bold;>Some changes on user.php model:
+  <li style="font-weight:15px;>php artisan install:API</li>
+        <li style="font-weight:15px;>Some changes on user.php model:
             <ul>
                 <li>use Laravel\Sanctum\HasAPITokens;</li>
                 <li>use HasFactory, Notifiable, HasAPITokens;</li>
             </ul>
   </li >
-        <li style="font-weight:bold;>Create product model:
+        <li style="font-weight:15px;>Create product model:
             <ul>
                 <li>php artisan make:model Product -m</li>
             </ul>
         </li>
-        <li style="font-weight:bold;>Some changes in product.php file in model:
+        <li style="font-weight:15px;>Some changes in product.php file in model:
             <ul>
                 <li>protected $table = 'products';</li>
                 <li>protected $fillable = [
@@ -110,7 +110,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 </li>
             </ul>
         </li>
-        <li style="font-weight:bold;>Product migration file (2024_07_08_091615_create_products_table.php):
+        <li style="font-weight:15px;>Product migration file (2024_07_08_091615_create_products_table.php):
             <ul>
                 <li>$table->id();</li>
                 <li>$table->string('category');</li>
@@ -134,12 +134,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 <li>$table->timestamps();</li>
             </ul>
         </li>
-        <li style="font-weight:bold;>Create controller ProductController:
+        <li style="font-weight:15px;>Create controller ProductController:
             <ul>
                 <li>php artisan make:controller API/ProductController</li>
             </ul>
         </li>
-        <li style="font-weight:bold;>Create API in route(API.php) for product:
+        <li style="font-weight:15px;>Create API in route(API.php) for product:
             <ul>
                 <li>Route::APIResource('products', ProductController::class);</li>
                 <li>Or</li>
@@ -150,22 +150,22 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 <li>Route::delete('products/{product}', [ProductController::class, 'destroy']);</li>
             </ul>
         </li>
-        <li style="font-weight:bold;>Check all the API list for this product:
+        <li style="font-weight:15px;>Check all the API list for this product:
             <ul>
                 <li>php artisan route:list</li>
             </ul>
         </li>
-        <li style="font-weight:bold;>Create the resource for product:
+        <li style="font-weight:15px;>Create the resource for product:
             <ul>
                 <li>php artisan make:resource ProductResource</li>
             </ul>
         </li>
-        <li style="font-weight:bold;>Create ProductAttr model:
+        <li style="font-weight:15px;>Create ProductAttr model:
             <ul>
                 <li>php artisan make:model ProductAttr -m</li>
             </ul>
         </li>
-        <li style="font-weight:bold;>Some changes in ProductAttr.php file in model:
+        <li style="font-weight:15px;>Some changes in ProductAttr.php file in model:
             <ul>
                 <li>protected $table = 'product_attrs';</li>
                 <li>protected $fillable = [
@@ -178,7 +178,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 </li>
             </ul>
         </li>
-        <li style="font-weight:bold;>ProductAttr migration file (2024_07_08_091624_create_product_attrs_table.php):
+        <li style="font-weight:15px;>ProductAttr migration file (2024_07_08_091624_create_product_attrs_table.php):
             <ul>
                 <li>$table->id();</li>
                 <li>$table->foreignId("products_id")->references('id')->on('products');</li>
@@ -192,12 +192,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 <li>$table->timestamps();</li>
             </ul>
         </li>
-        <li style="font-weight:bold;>Create controller ProductAttrController:
+        <li style="font-weight:15px;>Create controller ProductAttrController:
             <ul>
                 <li>php artisan make:controller API/ProductAttrController</li>
             </ul>
         </li>
-        <li style="font-weight:bold;>Create API in route(API.php) for productAttr:
+        <li style="font-weight:15px;>Create API in route(API.php) for productAttr:
             <ul>
                 <li>Route::get('productAttr/{pro_id}', [ProductAttrController::class, 'productAttrIndex']);</li>
                 <li>Route::post('productAttr/{pro_id}', [ProductAttrController::class, 'productAttrStore'])->name('productAttrStore');</li>
@@ -206,12 +206,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 <li>Route::delete('productAttr/{id}', [ProductAttrController::class, 'productAttrDestroy']);</li>
             </ul>
         </li>
-        <li style="font-weight:bold;>Create ProductImages model:
+        <li style="font-weight:15px;>Create ProductImages model:
             <ul>
                 <li>php artisan make:model ProductImages -m</li>
             </ul>
         </li>
-        <li style="font-weight:bold;>Some changes in ProductImages.php file in model:
+        <li style="font-weight:15px;>Some changes in ProductImages.php file in model:
             <ul>
                 <li>protected $table = 'product_images';</li>
                 <li>protected $fillable = [
@@ -224,7 +224,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 </li>
             </ul>
         </li>
-        <li style="font-weight:bold;>ProductImages migration file (2024_07_08_091631_create_product_images_table.php):
+        <li style="font-weight:15px;>ProductImages migration file (2024_07_08_091631_create_product_images_table.php):
             <ul>
                 <li>$table->id();</li>
                 <li>$table->foreignId("products_id")->references('id')->on('products');</li>
@@ -232,12 +232,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 <li>$table->timestamps();</li>
             </ul>
         </li>
-        <li style="font-weight:bold;>Create controller ProductImagesController:
+        <li style="font-weight:15px;>Create controller ProductImagesController:
             <ul>
                 <li>php artisan make:controller API/ProductImagesController</li>
             </ul>
-        </li style="font-weight:bold;>
-        <li style="font-weight:bold;>Create API in route(API.php) for productImages:
+        </li style="font-weight:15px;>
+        <li style="font-weight:15px;>Create API in route(API.php) for productImages:
             <ul>
                 <li>Route::get('productImages/{pro_id}', [ProductImagesController::class, 'ProductImages']);</li>
                 <li>Route::post('productImages/{pro_id}', [ProductImagesController::class, "productImagesStore"])->name('productImagesStore');</li>
@@ -245,8 +245,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 <li>Route::delete('productImages/{id}', [ProductImagesController::class, 'productImagesDestroy']);</li>
             </ul>
         </li>
-        <li style="font-weight:bold;>Go to controller then perform work</li>
-        <li style="font-weight:bold;>All API error handling, then go to bootstrap->app.php and some changes:
+        <li style="font-weight:15px;>Go to controller then perform work</li>
+        <li style="font-weight:15px;>All API error handling, then go to bootstrap->app.php and some changes:
             <ul>
                 <li>use Illuminate\Http\Request;</li>
                 <li>use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;</li>
@@ -259,7 +259,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 </li>
             </ul>
         </li>
-        <li style="font-weight:bold;>After all previously performed actions, check API is working or not using POSTMAN app for API checking. All API URLs:
+        <li style="font-weight:15px;>After all previously performed actions, check API is working or not using POSTMAN app for API checking. All API URLs:
             <ul>
                 <li>For product API:
                     <ul>
