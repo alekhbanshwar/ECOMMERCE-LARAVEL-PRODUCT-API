@@ -67,57 +67,46 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Some project information
 <h2>ECOMMER-LARAVEL-API PROJECT DOCUMENTATION</h2>
-<ul>
-    <li style="font-weight:15px;">install composer</li>
-    <li style="font-weight:15px;">Create Project: 
-        <ul>
-            <li>
-                composer create-project laravel/laravel ECOMMER-LARAVEL-API 
-            </li>
-        </ul>
-    </li>
-
-  <li style="font-weight:15px;">
-      Install API for the projects
-      <ul>
-            <li>
-                php artisan install:API
-            </li>
-        </ul>
-  </li>
-  <li style="font-weight:15px;">Some changes on user.php model:
+    <ul>
+        <li>Install composer</li>
+        <li>Create Project:
+            <ul>
+                <li>composer create-project laravel/laravel ECOMMER-LARAVEL-API</li>
+            </ul>
+        </li>
+        <li>Install API for the projects
+            <ul>
+                <li>php artisan install:API</li>
+            </ul>
+        </li>
+        <li>Some changes on user.php model:
             <ul>
                 <li>use Laravel\Sanctum\HasAPITokens;</li>
                 <li>use HasFactory, Notifiable, HasAPITokens;</li>
             </ul>
-  </li >
-  <li style="font-weight:15px;">Create product model:
+        </li>
+        <li>Create product model:
             <ul>
                 <li>php artisan make:model Product -m</li>
             </ul>
- </li>
-        <li style="font-weight:15px; ">Some changes in product.php file in model:
+        </li>
+        <li>Some changes in product.php file in model:
             <ul>
                 <li>protected $table = 'products';</li>
                 <li>protected $fillable = [
-                    'category', 'name', 'image', 'slug', 'brand', 'model',
-                    'short_desc', 'desc', 'keywords', 'technical_specification', 
-                    'uses', 'lead_time', 'tax', 'is_promo', 'is_featured', 
-                    'is_discounted', 'is_tranding', 'status'
+                    'category', 'name', 'image', 'slug', 'brand', 'model', 'short_desc', 
+                    'desc', 'keywords', 'technical_specification', 'uses', 'lead_time', 
+                    'tax', 'is_promo', 'is_featured', 'is_discounted', 'is_tranding', 'status'
                 ];</li>
-                <li>public function productAttrs()
-                    {
-                        return $this->hasMany(ProductAttr::class, 'products_id');
-                    }
-                </li>
-                <li>public function productImages()
-                    {
-                        return $this->hasMany(ProductImages::class, 'products_id');
-                    }
-                </li>
+                <li>public function productAttrs() {
+                    return $this->hasMany(ProductAttr::class, 'products_id');
+                }</li>
+                <li>public function productImages() {
+                    return $this->hasMany(ProductImages::class, 'products_id');
+                }</li>
             </ul>
         </li>
-        <li style="font-weight:15px;">Product migration file (2024_07_08_091615_create_products_table.php):
+        <li>Product migration file (2024_07_08_091615_create_products_table.php):
             <ul>
                 <li>$table->id();</li>
                 <li>$table->string('category');</li>
@@ -141,12 +130,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 <li>$table->timestamps();</li>
             </ul>
         </li>
-        <li style="font-weight:15px;">Create controller ProductController:
+        <li>Create controller ProductController:
             <ul>
                 <li>php artisan make:controller API/ProductController</li>
             </ul>
         </li>
-        <li style="font-weight:15px;">Create API in route(API.php) for product:
+        <li>Create API in route(API.php) for product:
             <ul>
                 <li>Route::APIResource('products', ProductController::class);</li>
                 <li>Or</li>
@@ -157,35 +146,33 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 <li>Route::delete('products/{product}', [ProductController::class, 'destroy']);</li>
             </ul>
         </li>
-        <li style="font-weight:15px;">Check all the API list for this product:
+        <li>Check all the API list for this product:
             <ul>
                 <li>php artisan route:list</li>
             </ul>
         </li>
-        <li style="font-weight:15px;">Create the resource for product:
+        <li>Create the resource for product:
             <ul>
                 <li>php artisan make:resource ProductResource</li>
             </ul>
         </li>
-        <li style="font-weight:15px;">Create ProductAttr model:
+        <li>Create ProductAttr model:
             <ul>
                 <li>php artisan make:model ProductAttr -m</li>
             </ul>
         </li>
-        <li style="font-weight:15px;>Some changes in ProductAttr.php file in model:
+        <li>Some changes in ProductAttr.php file in model:
             <ul>
                 <li>protected $table = 'product_attrs';</li>
                 <li>protected $fillable = [
                     'products_id', 'sku', 'attr_image', 'mrp', 'price', 'qty', 'size', 'color'
                 ];</li>
-                <li>public function product()
-                    {
-                        return $this->belongsTo(Product::class, 'products_id');
-                    }
-                </li>
+                <li>public function product() {
+                    return $this->belongsTo(Product::class, 'products_id');
+                }</li>
             </ul>
         </li>
-        <li style="font-weight:15px;">ProductAttr migration file (2024_07_08_091624_create_product_attrs_table.php):
+        <li>ProductAttr migration file (2024_07_08_091624_create_product_attrs_table.php):
             <ul>
                 <li>$table->id();</li>
                 <li>$table->foreignId("products_id")->references('id')->on('products');</li>
@@ -199,12 +186,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 <li>$table->timestamps();</li>
             </ul>
         </li>
-        <li style="font-weight:15px;">Create controller ProductAttrController:
+        <li>Create controller ProductAttrController:
             <ul>
                 <li>php artisan make:controller API/ProductAttrController</li>
             </ul>
         </li>
-        <li style="font-weight:15px;">Create API in route(API.php) for productAttr:
+        <li>Create API in route(API.php) for productAttr:
             <ul>
                 <li>Route::get('productAttr/{pro_id}', [ProductAttrController::class, 'productAttrIndex']);</li>
                 <li>Route::post('productAttr/{pro_id}', [ProductAttrController::class, 'productAttrStore'])->name('productAttrStore');</li>
@@ -213,25 +200,21 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 <li>Route::delete('productAttr/{id}', [ProductAttrController::class, 'productAttrDestroy']);</li>
             </ul>
         </li>
-        <li style="font-weight:15px;">Create ProductImages model:
+        <li>Create ProductImages model:
             <ul>
                 <li>php artisan make:model ProductImages -m</li>
             </ul>
         </li>
-        <li style="font-weight:15px;">Some changes in ProductImages.php file in model:
+        <li>Some changes in ProductImages.php file in model:
             <ul>
                 <li>protected $table = 'product_images';</li>
-                <li>protected $fillable = [
-                    'products_id', 'images'
-                ];</li>
-                <li>public function product()
-                    {
-                        return $this->belongsTo(Product::class, 'products_id');
-                    }
-                </li>
+                <li>protected $fillable = ['products_id', 'images'];</li>
+                <li>public function product() {
+                    return $this->belongsTo(Product::class, 'products_id');
+                }</li>
             </ul>
         </li>
-        <li style="font-weight:15px;">ProductImages migration file (2024_07_08_091631_create_product_images_table.php):
+        <li>ProductImages migration file (2024_07_08_091631_create_product_images_table.php):
             <ul>
                 <li>$table->id();</li>
                 <li>$table->foreignId("products_id")->references('id')->on('products');</li>
@@ -239,21 +222,21 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                 <li>$table->timestamps();</li>
             </ul>
         </li>
-        <li style="font-weight:15px;">Create controller ProductImagesController:
+        <li>Create controller ProductImagesController:
             <ul>
                 <li>php artisan make:controller API/ProductImagesController</li>
             </ul>
         </li>
-        <li style="font-weight:15px;">Create API in route(API.php) for productImages:
+        <li>Create API in route(API.php) for productImages:
             <ul>
                 <li>Route::get('productImages/{pro_id}', [ProductImagesController::class, 'ProductImages']);</li>
-                <li>Route::post('productImages/{pro_id}', [ProductImagesController::class, "productImagesStore"])->name('productImagesStore');</li>
-                <li>Route::get('productImages/{pro_id}/{id}', [ProductImagesController::class, "productImagesShow"]);</li>
+                <li>Route::post('productImages/{pro_id}', [ProductImagesController::class, 'productImagesStore'])->name('productImagesStore');</li>
+                <li>Route::get('productImages/{pro_id}/{id}', [ProductImagesController::class, 'productImagesShow']);</li>
                 <li>Route::delete('productImages/{id}', [ProductImagesController::class, 'productImagesDestroy']);</li>
             </ul>
         </li>
-        <li style="font-weight:15px;">Go to controller then perform work</li>
-        <li style="font-weight:15px;">All API error handling, then go to bootstrap->app.php and some changes:
+        <li>Go to controller then perform work</li>
+        <li>All API error handling, then go to bootstrap->app.php and some changes:
             <ul>
                 <li>use Illuminate\Http\Request;</li>
                 <li>use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;</li>
@@ -261,13 +244,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                     if ($request->is('API/*')) {
                         return response()->json([
                             'message' => 'Record not found.'
-                        ], 404);}
-                });
-                </li>
+                        ], 404);
+                    }
+                });</li>
             </ul>
         </li>
-       
-	</ul>
+    </ul>
     <h1>After all previously performed actions, check API is working or not using POSTMAN app for API checking. All API URLs:</h1>
     <h2>Product API</h2>
     <ol>
@@ -278,5 +260,18 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         <li>http://127.0.0.1:8000/api/products/{product} (DELETE)</li>
     </ol>
     <h2>ProductAttr API</h2>
-
+    <ol>
+        <li>http://127.0.0.1:8000/api/productAttr/{pro_id} (GET)</li>
+        <li>http://127.0.0.1:8000/api/productAttr/{pro_id} (POST)</li>
+        <li>http://127.0.0.1:8000/api/productAttr/{pro_id}/{id} (GET)</li>
+        <li>http://127.0.0.1:8000/api/productAttr/{pro_id}/{id}?_method=PUT (POST)</li>
+        <li>http://127.0.0.1:8000/api/productAttr/{id} (DELETE)</li>
+    </ol>
+    <h2>ProductImages API</h2>
+    <ol>
+        <li>http://127.0.0.1:8000/api/productImages/{pro_id} (GET)</li>
+        <li>http://127.0.0.1:8000/api/productImages/{pro_id} (POST)</li>
+        <li>http://127.0.0.1:8000/api/productImages/{pro_id}/{id} (GET)</li>
+        <li>http://127.0.0.1:8000/api/productImages/{id} (DELETE)</li>
+    </ol>
    
